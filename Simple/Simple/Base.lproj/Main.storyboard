@@ -7,7 +7,7 @@
         <!--1-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="1" customClass="EE1ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="1" id="vXZ-lx-hvc" userLabel="1" customClass="EE1ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZWd-ud-uYT"/>
                         <viewControllerLayoutGuide type="bottom" id="bb9-Sb-K9d"/>
@@ -16,35 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-mA-Bf0">
-                                <rect key="frame" x="98" y="270" width="125" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-mA-Bf0">
+                                <rect key="frame" x="59" y="270" width="203" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Basic"/>
-                                    <segment title="Custom"/>
+                                    <segment title="Default"/>
+                                    <segment title="Opacity"/>
+                                    <segment title="Horizon"/>
                                 </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="7vf-OO-hpR"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6ig-mA-Bf0" secondAttribute="centerX" id="DBl-kf-3nA"/>
+                            <constraint firstAttribute="centerY" secondItem="6ig-mA-Bf0" secondAttribute="centerY" id="ROy-8A-myu"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5YB-Wo-14K" appends="YES" id="j3p-jM-fum"/>
-                            <outletCollection property="gestureRecognizers" destination="5nS-Ke-CwR" appends="YES" id="7kE-VH-GUC"/>
                         </connections>
                     </view>
                     <connections>
-                        <segue destination="eYV-4m-9db" kind="custom" identifier="customModalSegue" id="F6v-4H-bCQ"/>
+                        <outlet property="segmentedControl" destination="6ig-mA-Bf0" id="0Bz-G9-sli"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="5YB-Wo-14K" userLabel="tap"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="5nS-Ke-CwR" userLabel="pan"/>
+                <tapGestureRecognizer id="5YB-Wo-14K" userLabel="tap">
+                    <connections>
+                        <action selector="tap:" destination="vXZ-lx-hvc" id="zyO-KZ-7m5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
         <!--2-->
         <scene sceneID="xv4-Ku-0yW">
             <objects>
-                <viewController id="eYV-4m-9db" userLabel="2" customClass="EE2ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="2" id="eYV-4m-9db" userLabel="2" customClass="EE2ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RQ3-IK-rzM"/>
                         <viewControllerLayoutGuide type="bottom" id="557-ce-K3c"/>
@@ -52,8 +62,29 @@
                     <view key="view" contentMode="scaleToFill" id="HnS-s7-yIx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.85027942518248179" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="top-left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofD-kh-vDT" userLabel="top-left">
+                                <rect key="frame" x="20" y="20" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottom-right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP5-Ba-kBd" userLabel="bottom-right">
+                                <rect key="frame" x="203" y="527" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="557-ce-K3c" firstAttribute="top" secondItem="CP5-Ba-kBd" secondAttribute="bottom" constant="20" id="BWL-yl-uP4"/>
+                            <constraint firstAttribute="trailing" secondItem="CP5-Ba-kBd" secondAttribute="trailing" constant="20" id="eeQ-Vp-OFj"/>
+                            <constraint firstItem="ofD-kh-vDT" firstAttribute="leading" secondItem="HnS-s7-yIx" secondAttribute="leading" constant="20" id="iIQ-e3-MwN"/>
+                            <constraint firstItem="ofD-kh-vDT" firstAttribute="top" secondItem="RQ3-IK-rzM" secondAttribute="bottom" id="v37-Df-gTb"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5QR-TM-p2z" appends="YES" id="Zjj-Sc-nhS"/>
                             <outletCollection property="gestureRecognizers" destination="w3B-vc-2bU" appends="YES" id="taK-Sj-XWd"/>
@@ -61,10 +92,18 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uaf-hC-WuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="5QR-TM-p2z" userLabel="tap"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="w3B-vc-2bU" userLabel="pan"/>
+                <tapGestureRecognizer id="5QR-TM-p2z" userLabel="tap">
+                    <connections>
+                        <action selector="tap:" destination="eYV-4m-9db" id="1YL-bJ-nZe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer delaysTouchesBegan="YES" minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="w3B-vc-2bU" userLabel="pan">
+                    <connections>
+                        <action selector="pan:" destination="eYV-4m-9db" id="eij-JK-CZU"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="607" y="109"/>
+            <point key="canvasLocation" x="657" y="102"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

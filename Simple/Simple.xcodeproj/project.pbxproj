@@ -22,7 +22,9 @@
 		84F054F4184AC739005A4620 /* SimpleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F054F3184AC739005A4620 /* SimpleTests.m */; };
 		84F05505184AC853005A4620 /* EE1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F05504184AC853005A4620 /* EE1ViewController.m */; };
 		84F05508184AC85B005A4620 /* EE2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F05507184AC85B005A4620 /* EE2ViewController.m */; };
-		84F0550E184AC98E005A4620 /* EESimpleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0550D184AC98E005A4620 /* EESimpleAnimator.m */; };
+		84F05513184AD7E2005A4620 /* EEOpacityAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F05512184AD7E2005A4620 /* EEOpacityAnimator.m */; };
+		84F05516184AD801005A4620 /* EEHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F05515184AD801005A4620 /* EEHorizontalAnimator.m */; };
+		84F05519184ADD54005A4620 /* UIView+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F05518184ADD54005A4620 /* UIView+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +59,12 @@
 		84F05504184AC853005A4620 /* EE1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EE1ViewController.m; sourceTree = "<group>"; };
 		84F05506184AC85B005A4620 /* EE2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EE2ViewController.h; sourceTree = "<group>"; };
 		84F05507184AC85B005A4620 /* EE2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EE2ViewController.m; sourceTree = "<group>"; };
-		84F0550C184AC98E005A4620 /* EESimpleAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EESimpleAnimator.h; sourceTree = "<group>"; };
-		84F0550D184AC98E005A4620 /* EESimpleAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EESimpleAnimator.m; sourceTree = "<group>"; };
+		84F05511184AD7E2005A4620 /* EEOpacityAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEOpacityAnimator.h; sourceTree = "<group>"; };
+		84F05512184AD7E2005A4620 /* EEOpacityAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEOpacityAnimator.m; sourceTree = "<group>"; };
+		84F05514184AD801005A4620 /* EEHorizontalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEHorizontalAnimator.h; sourceTree = "<group>"; };
+		84F05515184AD801005A4620 /* EEHorizontalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEHorizontalAnimator.m; sourceTree = "<group>"; };
+		84F05517184ADD54005A4620 /* UIView+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Log.h"; sourceTree = "<group>"; };
+		84F05518184ADD54005A4620 /* UIView+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 				84F054D7184AC739005A4620 /* EEAppDelegate.h */,
 				84F054D8184AC739005A4620 /* EEAppDelegate.m */,
 				84F054DA184AC739005A4620 /* Main.storyboard */,
+				84F05517184ADD54005A4620 /* UIView+Log.h */,
+				84F05518184ADD54005A4620 /* UIView+Log.m */,
 				84F05510184AC9A8005A4620 /* ViewController */,
 				84F0550F184AC99A005A4620 /* Transition */,
 				84F054E0184AC739005A4620 /* Images.xcassets */,
@@ -161,8 +169,10 @@
 		84F0550F184AC99A005A4620 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				84F0550C184AC98E005A4620 /* EESimpleAnimator.h */,
-				84F0550D184AC98E005A4620 /* EESimpleAnimator.m */,
+				84F05511184AD7E2005A4620 /* EEOpacityAnimator.h */,
+				84F05512184AD7E2005A4620 /* EEOpacityAnimator.m */,
+				84F05514184AD801005A4620 /* EEHorizontalAnimator.h */,
+				84F05515184AD801005A4620 /* EEHorizontalAnimator.m */,
 			);
 			name = Transition;
 			sourceTree = "<group>";
@@ -276,11 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F05516184AD801005A4620 /* EEHorizontalAnimator.m in Sources */,
 				84F054D9184AC739005A4620 /* EEAppDelegate.m in Sources */,
+				84F05519184ADD54005A4620 /* UIView+Log.m in Sources */,
 				84F05508184AC85B005A4620 /* EE2ViewController.m in Sources */,
-				84F0550E184AC98E005A4620 /* EESimpleAnimator.m in Sources */,
 				84F05505184AC853005A4620 /* EE1ViewController.m in Sources */,
 				84F054D5184AC739005A4620 /* main.m in Sources */,
+				84F05513184AD7E2005A4620 /* EEOpacityAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

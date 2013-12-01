@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3C1040B3-6CB3-4F5E-AED3-28BC0ADBC5D9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CustomTransitionSamples</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6F652322-ADA4-4492-9729-1DA5ED73C129</key>
+		<string>ssh://github.com/335g/CustomTransitionSamples.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CustomTransitionSamples.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6F652322-ADA4-4492-9729-1DA5ED73C129</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/335g/CustomTransitionSamples.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6F652322-ADA4-4492-9729-1DA5ED73C129</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6F652322-ADA4-4492-9729-1DA5ED73C129</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CustomTransitionSamples</string>
+		</dict>
+	</array>
+</dict>
+</plist>

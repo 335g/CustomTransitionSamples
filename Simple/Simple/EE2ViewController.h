@@ -10,4 +10,6 @@
 
 @interface EE2ViewController : UIViewController
 
+@property (nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransitionController;
+
 @end

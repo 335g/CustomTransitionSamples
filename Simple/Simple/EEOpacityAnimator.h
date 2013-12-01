@@ -1,5 +1,5 @@
 //
-//  EESimpleAnimator.h
+//  EEOpacityAnimator.h
 //  Simple
 //
 //  Created by Yoshiki Kudo on 2013/12/01.
@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EESimpleAnimator : NSObject
+@interface EEOpacityAnimator : NSObject <UIViewControllerAnimatedTransitioning>
+@property (nonatomic) BOOL presenting;
 
 @end
