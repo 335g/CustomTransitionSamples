@@ -122,7 +122,8 @@ typedef NS_ENUM (NSUInteger, EETransitionStyle) {
         
         CGPoint point = [recognizer locationInView:view];
         CGPoint velocity = [recognizer velocityInView:view];
-        if (point.x < 270.0 && velocity.x < 0.0) {
+        CGFloat boundary = view.bounds.size.width * 0.8;
+        if (point.x < boundary && velocity.x < 0.0) {
             [self.interactiveTransitionController finishInteractiveTransition];
         }else {
             [self.interactiveTransitionController cancelInteractiveTransition];

@@ -80,8 +80,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTe-4i-Lp4" userLabel="Active">
+                                <rect key="frame" x="160" y="0.0" width="160" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Active" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-cq-cjx">
+                                        <rect key="frame" x="56" y="527" width="48" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nXn-cq-cjx" secondAttribute="bottom" constant="20" id="6JU-IW-Bdz"/>
+                                    <constraint firstAttribute="centerX" secondItem="nXn-cq-cjx" secondAttribute="centerX" id="N3h-eZ-N7a"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Tu0-ee-3Es" appends="YES" id="8ad-GX-7Sb"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXV-CC-ctK" userLabel="Passive">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Passive" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tt-wh-3Hc">
+                                        <rect key="frame" x="50" y="527" width="60" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Tt-wh-3Hc" secondAttribute="bottom" constant="20" id="X8Y-Jj-Haf"/>
+                                    <constraint firstAttribute="centerX" secondItem="9Tt-wh-3Hc" secondAttribute="centerX" id="oL2-yj-XMI"/>
+                                </constraints>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-lo-WKa" userLabel="segmentedControl">
-                                <rect key="frame" x="99" y="270" width="125" height="29"/>
+                                <rect key="frame" x="97" y="270" width="126" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Default"/>
@@ -92,14 +132,17 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="j4h-lo-WKa" secondAttribute="centerY" id="gh7-T1-v1X"/>
-                            <constraint firstAttribute="centerX" secondItem="j4h-lo-WKa" secondAttribute="centerX" id="rxW-wa-W79"/>
+                            <constraint firstItem="rTe-4i-Lp4" firstAttribute="top" secondItem="4Aq-AR-xqJ" secondAttribute="top" id="4Nl-jc-ji5"/>
+                            <constraint firstItem="WT6-Ig-uJM" firstAttribute="top" secondItem="xXV-CC-ctK" secondAttribute="bottom" id="89H-VH-agW"/>
+                            <constraint firstItem="WT6-Ig-uJM" firstAttribute="top" secondItem="rTe-4i-Lp4" secondAttribute="bottom" id="Fg7-hD-sNV"/>
+                            <constraint firstAttribute="centerX" secondItem="j4h-lo-WKa" secondAttribute="centerX" id="KjE-rq-HQ5"/>
+                            <constraint firstAttribute="centerY" secondItem="j4h-lo-WKa" secondAttribute="centerY" id="hwb-3q-R09"/>
+                            <constraint firstItem="xXV-CC-ctK" firstAttribute="top" secondItem="4Aq-AR-xqJ" secondAttribute="top" id="xwo-dc-YWu"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Tu0-ee-3Es" appends="YES" id="QqB-3m-P1R"/>
                             <outletCollection property="gestureRecognizers" destination="XVC-hB-XcH" appends="YES" id="hZ5-jI-H7a"/>
                         </connections>
                     </view>
@@ -110,16 +153,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FeF-4s-ups" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Tu0-ee-3Es" userLabel="tap">
-                    <connections>
-                        <action selector="tap:" destination="h0y-lb-wWU" id="8qM-Nv-oqg"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="XVC-hB-XcH" userLabel="pan">
                     <connections>
                         <action selector="pan:" destination="h0y-lb-wWU" id="R7e-tb-N2d"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="Tu0-ee-3Es" userLabel="tap">
+                    <connections>
+                        <action selector="tap:" destination="h0y-lb-wWU" id="8qM-Nv-oqg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1435" y="-184"/>
         </scene>
