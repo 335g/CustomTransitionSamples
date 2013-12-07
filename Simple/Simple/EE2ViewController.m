@@ -13,10 +13,6 @@
 @end
 
 @implementation EE2ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-}
 
 #pragma mark - Action
 - (IBAction)tap:(UITapGestureRecognizer *)sender {
@@ -67,11 +63,11 @@
     return UIInterfaceOrientationMaskAll;
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    NSLog(@"%s", __func__);
-    NSLog(@"topLayoutGuide.length:%f", [self.topLayoutGuide length]);
-    NSLog(@"bottomLayoutGuide.length:%f", [self.bottomLayoutGuide length]);
-}
+//- (void)viewDidLayoutSubviews {
+//    [super viewDidLayoutSubviews];
+//    
+//    NSLog(@"%s", __func__);
+//    NSLog(@"topLayoutGuide.length:%f", [self.topLayoutGuide length]);
+//    NSLog(@"bottomLayoutGuide.length:%f", [self.bottomLayoutGuide length]);
+//}
 @end

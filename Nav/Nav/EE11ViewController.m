@@ -42,6 +42,11 @@
 
 - (void)awakeFromNib {
     NSLog(@"nav.view.recognizers:%@", self.navigationController.view.gestureRecognizers);
+    
+    // 使わない場合はenabled=NOにしておいた方が良さそうです
+//    for (UIGestureRecognizer *recognizer in self.navigationController.view.gestureRecognizers) {
+//        recognizer.enabled = NO;
+//    }
 }
 
 #pragma mark - Action
