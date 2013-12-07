@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PfL-sl-mhJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="a5Z-C9-VdA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="PfL-sl-mhJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5wn-19-uGZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gui-OO-022" kind="relationship" relationship="rootViewController" id="CoH-ld-XOm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vv5-bI-8iv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="-184"/>
+        </scene>
+        <!--11-->
+        <scene sceneID="Axe-fh-LZd">
+            <objects>
+                <viewController storyboardIdentifier="11" title="1" id="gui-OO-022" userLabel="11" customClass="EE11ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kV4-X0-KjO"/>
+                        <viewControllerLayoutGuide type="bottom" id="t3s-xL-UIp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L2c-aC-D7N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1qL-Kw-Iej" userLabel="segmentedControl">
+                                <rect key="frame" x="99" y="270" width="125" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="gui-OO-022" eventType="valueChanged" id="1Tm-6j-1Sh"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1qL-Kw-Iej" secondAttribute="centerX" id="43r-QF-BE8"/>
+                            <constraint firstAttribute="centerY" secondItem="1qL-Kw-Iej" secondAttribute="centerY" id="nH7-Ee-rXs"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z69-d5-yMf" appends="YES" id="u2u-Sq-4EA"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="1" id="4Pk-vT-QDZ"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="1qL-Kw-Iej" id="L8D-RA-8UE"/>
+                        <segue destination="h0y-lb-wWU" kind="push" identifier="push" id="dSS-he-eZQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIA-td-vyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z69-d5-yMf" userLabel="tap">
+                    <connections>
+                        <action selector="tap:" destination="gui-OO-022" id="JDF-ld-9zP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1034" y="-184"/>
+        </scene>
+        <!--12-->
+        <scene sceneID="SuB-Mh-4ll">
+            <objects>
+                <viewController storyboardIdentifier="12" title="2" id="h0y-lb-wWU" userLabel="12" customClass="EE12ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aI0-AS-koO"/>
+                        <viewControllerLayoutGuide type="bottom" id="WT6-Ig-uJM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Aq-AR-xqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-lo-WKa" userLabel="segmentedControl">
+                                <rect key="frame" x="99" y="270" width="125" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="h0y-lb-wWU" eventType="valueChanged" id="hHz-ge-EAp"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="j4h-lo-WKa" secondAttribute="centerY" id="gh7-T1-v1X"/>
+                            <constraint firstAttribute="centerX" secondItem="j4h-lo-WKa" secondAttribute="centerX" id="rxW-wa-W79"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Tu0-ee-3Es" appends="YES" id="QqB-3m-P1R"/>
+                            <outletCollection property="gestureRecognizers" destination="XVC-hB-XcH" appends="YES" id="hZ5-jI-H7a"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="2" id="kpu-fI-0WV"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="j4h-lo-WKa" id="9a6-eR-4OL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeF-4s-ups" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Tu0-ee-3Es" userLabel="tap">
+                    <connections>
+                        <action selector="tap:" destination="h0y-lb-wWU" id="8qM-Nv-oqg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="XVC-hB-XcH" userLabel="pan">
+                    <connections>
+                        <action selector="pan:" destination="h0y-lb-wWU" id="R7e-tb-N2d"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1435" y="-184"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

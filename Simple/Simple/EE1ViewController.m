@@ -72,6 +72,7 @@ typedef NS_ENUM (NSUInteger, EETransitionStyle) {
             type = @"Horizon";
             break;
     }
+    NSLog(@" ");
     NSLog(@" -> present viewController (%@)", type);
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  << log
     

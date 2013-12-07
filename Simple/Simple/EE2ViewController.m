@@ -20,8 +20,6 @@
 
 #pragma mark - Action
 - (IBAction)tap:(UITapGestureRecognizer *)sender {
-    
-    NSLog(@" ** dismiss viewController");
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -29,5 +27,16 @@
     
 }
 
+#pragma mark - Interface Orientation
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    NSLog(@"%s", __func__);
+    NSLog(@"topLayoutGuide.length:%f", [self.topLayoutGuide length]);
+    NSLog(@"bottomLayoutGuide.length:%f", [self.bottomLayoutGuide length]);
+}
 @end

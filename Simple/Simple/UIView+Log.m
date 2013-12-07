@@ -11,7 +11,7 @@
 @implementation UIView (Log)
 - (void)logWithID:(NSString *)index {
     
-    NSLog(@"%@", [NSString stringWithFormat:@"frame:%@, bounds:%@, center:%@, transform:%@ - (%@)",
+    NSLog(@"%@", [NSString stringWithFormat:@"frame:%@, bounds:%@, center:%@, transform:%@ - %@",
                   NSStringFromCGRect(self.frame),
                   NSStringFromCGRect(self.bounds),
                   NSStringFromCGPoint(self.center),
